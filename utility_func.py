@@ -1,3 +1,11 @@
+"""
+utility_func.py
+Author: Sin Yong Tan 2020
+
+Helper functions for 2_env_occ_pred.py
+"""
+
+
 import numpy as np
 import matplotlib.pyplot as plt
 from sklearn.metrics import accuracy_score, confusion_matrix, classification_report
