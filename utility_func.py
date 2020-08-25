@@ -12,6 +12,8 @@ from sklearn.metrics import accuracy_score, confusion_matrix, classification_rep
 from copy import deepcopy
 import pandas as pd
 
+import sys
+
 def MEP(data, numparts):
 	num_per_part = np.round(len(data)/numparts)
 	data = np.sort(data)
@@ -125,13 +127,19 @@ def compute_TM(state_data, occupancy):
 # Work for BINARY TM computed using both compute_TM() and pd.crosstab()
 def inference(states, TM): 
 	pred = []
+	missing = 0
 	for index,state in enumerate(states):
 		try:
 			pred.append(TM[state])
 			# print(f"State {state} Exist")
 		except:
-			print(f"State {state} DNE, forwarding previous prediction")
-			pred.append(pred[-1]) # If state doesn't exist, take previous states's occ
+			missing +=1
+			# print(f"State {state} DNE, forwarding previous prediction")]
+			try:
+				pred.append(pred[-1]) # If state doesn't exist, take previous states's occ
+			except:
+				pred.append(1.0)
+	# print(f'missing: {missing}')
 	return pred
 	# return [TM[state]  for state in states]
 

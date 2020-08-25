@@ -1,0 +1,822 @@
+Last login: Tue Aug 18 21:41:39 on ttys001
+(base) Maggies-MBP:~ maggie$ cd Documents/Github/HPD-
+HPD-Inference_and_Processing/ HPD-Pycharm/
+(base) Maggies-MBP:~ maggie$ cd Documents/Github/HPD-Inference_and_Processing/
+(base) Maggies-MBP:HPD-Inference_and_Processing maggie$ ls
+Inference-Environmental	Process-Audio		Process-Images
+Inference-Images	Process-Environmental
+(base) Maggies-MBP:HPD-Inference_and_Processing maggie$ nano Inference-Images/.gitignore 
+(base) Maggies-MBP:HPD-Inference_and_Processing maggie$ 
+  [Restored Aug 19, 2020 at 9:50:38 PM]
+Last login: Wed Aug 19 21:50:38 on ttys000
+(base) Maggies-MBP:HPD-Inference_and_Processing maggie$ 
+(base) Maggies-MBP:HPD-Inference_and_Processing maggie$ ls
+HPD-processing.code-workspace	Process-Audio
+Inference-Environmental		Process-Environmental
+Inference-Images		Process-Images
+(base) Maggies-MBP:HPD-Inference_and_Processing maggie$ cd Process-Environmental/
+(base) Maggies-MBP:Process-Environmental maggie$ git status
+fatal: not a git repository (or any of the parent directories): .git
+(base) Maggies-MBP:Process-Environmental maggie$ git init
+Initialized empty Git repository in /Users/maggie/Documents/Github/HPD-Inference_and_Processing/Process-Environmental/.git/
+(base) Maggies-MBP:Process-Environmental maggie$ git add .
+(base) Maggies-MBP:Process-Environmental maggie$ git commit -m "first commit for env processing"
+[master (root-commit) c5478e9] first commit for env processing
+ 4 files changed, 3888 insertions(+)
+ create mode 100644 .ipynb_checkpoints/HomeDataClasses-checkpoint.py
+ create mode 100644 .ipynb_checkpoints/env_explore-checkpoint.ipynb
+ create mode 100644 HomeDataClasses.py
+ create mode 100644 env_explore.ipynb
+(base) Maggies-MBP:Process-Environmental maggie$ git remote add origin https://github.com/mhsjacoby/Process-Environmental.git
+(base) Maggies-MBP:Process-Environmental maggie$ git push -u origin master
+Counting objects: 5, done.
+Delta compression using up to 12 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 6.82 MiB | 2.04 MiB/s, done.
+Total 5 (delta 0), reused 0 (delta 0)
+To https://github.com/mhsjacoby/Process-Environmental.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+(base) Maggies-MBP:Process-Environmental maggie$ github-linguist 
+-bash: github-linguist: command not found
+(base) Maggies-MBP:Process-Environmental maggie$ cd ..
+(base) Maggies-MBP:HPD-Inference_and_Processing maggie$ cd ..
+(base) Maggies-MBP:Github maggie$ gem install github-linguist
+Fetching: charlock_holmes-0.7.7.gem (100%)
+ERROR:  While executing gem ... (Gem::FilePermissionError)
+    You don't have write permissions for the /Library/Ruby/Gems/2.3.0 directory.
+(base) Maggies-MBP:Github maggie$ brew install cmake pkg-config icu4c
+Updating Homebrew...
+==> Auto-updated Homebrew!
+Updated 3 taps (homebrew/core, homebrew/cask and homebrew/services).
+==> New Formulae
+acl2            charge          gostatic        sqlite-utils    wownero
+borgbackup      datasette       kondo           staticcheck
+castget         eleventy        mariadb@10.4    terraform@0.12
+cbc             empty           microplane      ugrep
+cgl             go@1.14         pandocomatic    usb.ids
+==> Updated Formulae
+Updated 395 formulae.
+==> Deleted Formulae
+wpscan
+==> Updated Casks
+1password-cli                             middle
+4k-stogram                                milanote
+4k-video-downloader                       minitube
+4k-youtube-to-mp3                         missive
+a-better-finder-attributes                mit-app-inventor
+ableton-live                              mochi
+ableton-live-intro                        monero-wallet
+ableton-live-lite                         mountain-duck
+ableton-live-standard                     mps
+ableton-live-suite                        mqttx
+abstract                                  multitouch
+acquia-dev                                mumu
+activedock                                musicbrainz-picard
+adobe-acrobat-reader                      musictube
+adobe-dng-converter                       mycrypto
+aerial                                    netron
+airdisplay                                netxms-console
+airflow                                   nextcloud
+airtame                                   nosqlbooster-for-mongodb
+alfaview                                  notion
+alfred                                    obsidian
+alt-tab                                   one-switch
+amazon-workspaces                         onedrive
+anydo                                     open-ecard
+anzeigenchef                              openaudible
+app-cleaner                               openrct2
+aptible                                   opera
+arq                                       orka
+atom                                      outline
+audirvana                                 panoply
+axe-edit-iii                              parallels
+axure-rp                                  perforce
+azure-data-studio                         permute
+backblaze                                 pingplotter
+backuploupe                               pixelsnap
+balenaetcher                              plex
+banktivity                                plex-media-server
+bettertouchtool                           poedit
+bibdesk                                   pokemon-reborn
+bitwig-studio                             popo
+blender                                   postbox
+blitz                                     postman
+blocs                                     private-internet-access
+blue-jeans                                processing
+brave-browser                             proclaim
+burp-suite                                protonmail-bridge
+cacher                                    protopie
+camo-studio                               prowritingaid
+camunda-modeler                           proxyman
+carbon-copy-cloner                        puppetry
+chef-workstation                          pyfa
+chromium                                  qgis
+clamxav                                   qlcolorcode
+clash-for-windows                         qownnotes
+cleanmymac                                qqlive
+cleanshot                                 quicken
+cloudapp                                  quip
+codeexpander                              raven-reader
+command-tab-plus                          react-native-debugger
+cookie                                    refined-github-safari
+coteditor                                 remember-the-milk
+couchbase-server-enterprise               remotix-agent
+cozy-drive                                responsively
+cryptomator                               retroarch
+curio                                     retroarch-metal
+cutter                                    rider
+cyberduck                                 ring
+darktable                                 ringcentral
+dash                                      rocks-n-diamonds
+dashcam-viewer                            rstudio
+dashlane                                  runway
+datagrip                                  sabnzbd
+dbeaver-community                         screen
+dcommander                                screens
+dcp-o-matic                               securesafe
+dcp-o-matic-batch-converter               securityspy
+dcp-o-matic-encode-server                 sessionrestore
+dcp-o-matic-kdm-creator                   shutter-encoder
+dcp-o-matic-player                        shuttle
+deepgit                                   simplenote
+deezer                                    simply-fortran
+devonthink                                sipgate-softphone
+diskcatalogmaker                          sizzy
+djay-pro                                  sketch
+docear                                    sketchbook
+dotnet                                    sketchup-pro
+dotnet-sdk                                slimhud
+downie                                    slite
+drawio                                    smartsynchronize
+easyeda                                   snipaste
+electerm                                  sococo
+element                                   softube-central
+elmedia-player                            sonic-visualiser
+eloston-chromium                          soundsource
+emacs                                     splayer
+epichrome                                 sqlpro-for-mssql
+exodus                                    sqlpro-studio
+figtree                                   ssh-config-editor
+fl-studio                                 stats
+flash-npapi                               strawberry
+flash-player                              streamlabs-obs
+flash-player-debugger                     studio-3t
+flash-player-debugger-npapi               studiolinkstandalone
+flash-player-debugger-ppapi               swiftformat-for-xcode
+flash-ppapi                               swifty
+flightgear                                syncthing
+flipper                                   tableau
+fontbase                                  tableau-prep
+fontexplorer-x-pro                        tableau-public
+fontforge                                 tableau-reader
+framer                                    telegram
+freedom                                   telegram-desktop
+funter                                    tencent-meeting
+futuniuniu                                terminus
+garagebuy                                 texpad
+gdlauncher                                thought-train
+geogebra                                  tibco-jaspersoft-studio
+get-iplayer-automator                     tiger-trade
+glyphfinder                               tikzit
+glyphs                                    tiles
+gog-galaxy                                timecamp
+goland                                    timemator
+goodsync                                  timeular
+google-chrome                             toggl
+gretl                                     tongbu
+grids                                     torguard
+gureumkim                                 trader-workstation
+hbuilderx                                 transcribe
+hey                                       transmit
+hubstaff                                  transocks
+ibackup-viewer                            tribler
+ibm-cloud-cli                             trinity
+imazing                                   tweeten
+imgotv                                    ueli
+insync                                    upic
+integrity                                 upwork
+intel-psxe-ce-c-plus-plus                 uu-booster
+iriunwebcam                               v2rayu
+jabt-flow                                 vimr
+jamulus                                   virtualhostx
+jellyfin                                  visual-paradigm
+kap                                       visual-paradigm-ce
+keepassxc                                 visual-studio
+kite                                      visual-studio-code
+kitty                                     vitalsource-bookshelf
+kubernetic                                vivaldi
+kui                                       vmpk
+lastpass                                  vnc-viewer
+ledger-live                               vrew
+lehreroffice                              vscodium
+lens                                      vysor
+lightproxy                                waterfox-current
+loaf                                      wavebox
+local                                     webcatalog
+loom                                      wechatwork
+lulu                                      weiyun
+maccy                                     whatroute
+macvim                                    whatsapp
+mailbutler                                whatsize
+mailplane                                 widelands
+malus                                     wingpersonal
+marked                                    wireshark
+marvel                                    wireshark-chmodbpf
+master-pdf-editor                         wondershare-uniconverter
+mcreator                                  wordpresscom
+mediainfo                                 workflowy
+mediathekview                             xamarin-android
+mellow                                    ximalaya
+melodics                                  xmplify
+memory                                    yam-display
+metabase                                  yate
+metasploit                                yinxiangbiji
+mia-for-gmail                             youku
+microsoft-auto-update                     ytmdesktop-youtube-music
+microsoft-edge                            zettlr
+microsoft-excel                           zoc
+microsoft-office                          zoom-for-it-admins
+microsoft-outlook                         zoomus
+microsoft-powerpoint                      zulip
+microsoft-word
+==> Deleted Casks
+8x8-video-meetings   dropbox-encore       scope                trojan-qt5
+borgbackup           enolsoft-chm-view    sleepyhead
+cutbox               myworkspace          sopcast
+
+Warning: pkg-config 0.29.2_3 is already installed and up-to-date
+To reinstall 0.29.2_3, run `brew reinstall pkg-config`
+Warning: icu4c 67.1 is already installed and up-to-date
+To reinstall 67.1, run `brew reinstall icu4c`
+==> Downloading https://homebrew.bintray.com/bottles/cmake-3.18.1.mojave.bottle.ta
+==> Downloading from https://d29vzk4ow07wi7.cloudfront.net/9f0cf88ec2b2f5ba8f0e2da
+######################################################################## 100.0%
+Error: cmake 3.16.4 is already installed
+To upgrade to 3.18.1, run `brew upgrade cmake`.
+(base) Maggies-MBP:Github maggie$ cd HPD-
+HPD-Inference_and_Processing/ HPD-Pycharm/
+(base) Maggies-MBP:Github maggie$ cd HPD-Inference_and_Processing/
+(base) Maggies-MBP:HPD-Inference_and_Processing maggie$ cd Inference-Environmental/
+(base) Maggies-MBP:Inference-Environmental maggie$ nano .gitatributes
+(base) Maggies-MBP:Inference-Environmental maggie$ git add .
+(base) Maggies-MBP:Inference-Environmental maggie$ git coomit -m "add .gitattributes"
+git: 'coomit' is not a git command. See 'git --help'.
+
+The most similar command is
+	commit
+(base) Maggies-MBP:Inference-Environmental maggie$ git comit -m "add .gitattributes"
+git: 'comit' is not a git command. See 'git --help'.
+
+The most similar command is
+	commit
+(base) Maggies-MBP:Inference-Environmental maggie$ git commit -m "add .gitattributes"
+[master ff5ffb7] add .gitattributes
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitatributes
+(base) Maggies-MBP:Inference-Environmental maggie$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 12 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 314 bytes | 314.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mhsjacoby/HPD-Inference-Env.git
+   e9fcf24..ff5ffb7  master -> master
+(base) Maggies-MBP:Inference-Environmental maggie$ cd ..
+(base) Maggies-MBP:HPD-Inference_and_Processing maggie$ cd Process-Environmental/
+(base) Maggies-MBP:Process-Environmental maggie$ nano .gitattributes
+(base) Maggies-MBP:Process-Environmental maggie$ git add .
+(base) Maggies-MBP:Process-Environmental maggie$ git commit -m "add .gitattributes"
+[master c72953a] add .gitattributes
+ 1 file changed, 1 insertion(+)
+ create mode 100644 .gitattributes
+(base) Maggies-MBP:Process-Environmental maggie$ git push origin master
+Counting objects: 3, done.
+Delta compression using up to 12 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 316 bytes | 316.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/mhsjacoby/Process-Environmental.git
+   c5478e9..c72953a  master -> master
+(base) Maggies-MBP:Process-Environmental maggie$ */.ipynb_checkpoints
+-bash: */.ipynb_checkpoints: No such file or directory
+(base) Maggies-MBP:Process-Environmental maggie$ */.DS_Store
+-bash: */.DS_Store: No such file or directory
+(base) Maggies-MBP:Process-Environmental maggie$ .DS_Store
+-bash: .DS_Store: command not found
+(base) Maggies-MBP:Process-Environmental maggie$ .ipynb_checkpoints
+-bash: .ipynb_checkpoints: command not found
+(base) Maggies-MBP:Process-Environmental maggie$ .gitignore
+-bash: .gitignore: command not found
+(base) Maggies-MBP:Process-Environmental maggie$ __pycache__
+-bash: __pycache__: command not found
+(base) Maggies-MBP:Process-Environmental maggie$ nano .gitignore
+(base) Maggies-MBP:Process-Environmental maggie$ git rm -r --cached .
+rm '.gitattributes'
+rm '.ipynb_checkpoints/HomeDataClasses-checkpoint.py'
+rm '.ipynb_checkpoints/env_explore-checkpoint.ipynb'
+rm 'HomeDataClasses.py'
+rm 'env_explore.ipynb'
+(base) Maggies-MBP:Process-Environmental maggie$ git add .
+(base) Maggies-MBP:Process-Environmental maggie$ git commit -m "add .gitignore"
+[master 800761d] add .gitignore
+ 3 files changed, 1945 deletions(-)
+ delete mode 100644 .gitattributes
+ delete mode 100644 .ipynb_checkpoints/HomeDataClasses-checkpoint.py
+ delete mode 100644 .ipynb_checkpoints/env_explore-checkpoint.ipynb
+(base) Maggies-MBP:Process-Environmental maggie$ git push origin master
+Counting objects: 2, done.
+Delta compression using up to 12 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 289 bytes | 289.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0)
+To https://github.com/mhsjacoby/Process-Environmental.git
+   c72953a..800761d  master -> master
+(base) Maggies-MBP:Process-Environmental maggie$ git checkout -b inference_db
+Switched to a new branch 'inference_db'
+(base) Maggies-MBP:Process-Environmental maggie$ pwd
+/Users/maggie/Documents/Github/HPD-Inference_and_Processing/Process-Environmental
+(base) Maggies-MBP:Process-Environmental maggie$ nano .gitattributes
+(base) Maggies-MBP:Process-Environmental maggie$ nano .gitattributes
+(base) Maggies-MBP:Process-Environmental maggie$ git add . 
+(base) Maggies-MBP:Process-Environmental maggie$ git commit -m "add data cleaning file"
+[inference_db 0ae0fb2] add data cleaning file
+ 4 files changed, 417 insertions(+), 738 deletions(-)
+ create mode 100644 cleanData.py
+ create mode 100644 myFunctions.py
+(base) Maggies-MBP:Process-Environmental maggie$ git branch
+* inference_db
+  master
+(base) Maggies-MBP:Process-Environmental maggie$ git push origin inference_db
+Counting objects: 6, done.
+Delta compression using up to 12 threads.
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 4.56 KiB | 4.56 MiB/s, done.
+Total 6 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'inference_db' on GitHub by visiting:
+remote:      https://github.com/mhsjacoby/Process-Environmental/pull/new/inference_db
+remote: 
+To https://github.com/mhsjacoby/Process-Environmental.git
+ * [new branch]      inference_db -> inference_db
+(base) Maggies-MBP:Process-Environmental maggie$ git add . 
+(base) Maggies-MBP:Process-Environmental maggie$ git commit -m "finish integrating cleaning"
+[inference_db 7bffe84] finish integrating cleaning
+ 3 files changed, 321 insertions(+), 164 deletions(-)
+ rewrite cleanData.py (76%)
+(base) Maggies-MBP:Process-Environmental maggie$ git push origin inference_db
+Counting objects: 5, done.
+Delta compression using up to 12 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 2.79 KiB | 2.79 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/mhsjacoby/Process-Environmental.git
+   0ae0fb2..7bffe84  inference_db -> inference_db
+(base) Maggies-MBP:Process-Environmental maggie$ git add . 
+(base) Maggies-MBP:Process-Environmental maggie$ git commit -m "finish integrating cleaning"
+[inference_db 9945c90] finish integrating cleaning
+ 3 files changed, 430 insertions(+), 290 deletions(-)
+(base) Maggies-MBP:Process-Environmental maggie$ git push origin inference_db
+Counting objects: 5, done.
+Delta compression using up to 12 threads.
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 1.73 KiB | 1.73 MiB/s, done.
+Total 5 (delta 3), reused 0 (delta 0)
+remote: Resolving deltas: 100% (3/3), completed with 3 local objects.
+To https://github.com/mhsjacoby/Process-Environmental.git
+   7bffe84..9945c90  inference_db -> inference_db
+(base) Maggies-MBP:Process-Environmental maggie$ git add . 
+(base) Maggies-MBP:Process-Environmental maggie$ git commit -m "finish integrating cleaning"
+[inference_db 6d90526] finish integrating cleaning
+ 2 files changed, 542 insertions(+), 535 deletions(-)
+(base) Maggies-MBP:Process-Environmental maggie$ git push origin inference_db
+Counting objects: 4, done.
+Delta compression using up to 12 threads.
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 3.18 KiB | 23.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/mhsjacoby/Process-Environmental.git
+   9945c90..6d90526  inference_db -> inference_db
+(base) Maggies-MBP:Process-Environmental maggie$ cd ..
+(base) Maggies-MBP:HPD-Inference_and_Processing maggie$ ls
+HPD-processing.code-workspace	Inference-Images		Process-Environmental
+Inference-Environmental		Process-Audio			Process-Images
+(base) Maggies-MBP:HPD-Inference_and_Processing maggie$ cd Process-Environmental/
+(base) Maggies-MBP:Process-Environmental maggie$ ls
+HomeDataClasses.py	cleanData.py		myFunctions.py
+__pycache__		env_explore.ipynb
+(base) Maggies-MBP:Process-Environmental maggie$ git status
+On branch inference_db
+nothing to commit, working tree clean
+(base) Maggies-MBP:Process-Environmental maggie$ cd ..
+(base) Maggies-MBP:HPD-Inference_and_Processing maggie$ ls
+HPD-processing.code-workspace	Inference-Images		Process-Environmental
+Inference-Environmental		Process-Audio			Process-Images
+(base) Maggies-MBP:HPD-Inference_and_Processing maggie$ cd Inference-Environmental/
+(base) Maggies-MBP:Inference-Environmental maggie$ ls
+2_env_occ_pred.py	__pycache__		env-Models		utility_func.py
+(base) Maggies-MBP:Inference-Environmental maggie$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+(base) Maggies-MBP:Inference-Environmental maggie$ git branch
+  Maggie-Edits
+* master
+(base) Maggies-MBP:Inference-Environmental maggie$ git checkout Maggie-Edits
+Switched to branch 'Maggie-Edits'
+(base) Maggies-MBP:Inference-Environmental maggie$ git status
+On branch Maggie-Edits
+nothing to commit, working tree clean
+(base) Maggies-MBP:Inference-Environmental maggie$ ls
+2_env_occ_pred.py	__pycache__		env-Models		utility_func.py
+(base) Maggies-MBP:Inference-Environmental maggie$ open utility_func.py 
+(base) Maggies-MBP:Inference-Environmental maggie$ ls
+(base) Maggies-MBP:Inference-Environmental maggie$ python3 2_env_occ_pred.py -path /Users/maggie/Desktop/HPD_mobile_data/HPD-env/HPD_mobile-H6/ls
+Traceback (most recent call last):
+  File "2_env_occ_pred.py", line 128, in <module>
+    H_num, color = H[0], H[1][0].upper()
+IndexError: list index out of range
+(base) Maggies-MBP:Inference-Environmental maggie$ ls
+2_env_occ_pred.py	__pycache__		env-Models		utility_func.py
+(base) Maggies-MBP:Inference-Environmental maggie$ python3 2_env_occ_pred.py -path /Users/maggie/Desktop/HPD_mobile_data/HPD-env/HPD_mobile-H6/H6-black/
+Hubs: ['BS3', 'BS4', 'BS5', 'BS2']
+Traceback (most recent call last):
+  File "2_env_occ_pred.py", line 135, in <module>
+    data_path = os.path.join(path, H_elements, hub, 'processed_env', f'{H_num}_{hub}_full_cleaned.csv')
+NameError: name 'H_elements' is not defined
+(base) Maggies-MBP:Inference-Environmental maggie$ python3 2_env_occ_pred.py -path /Users/maggie/Desktop/HPD_mobile_data/HPD-env/HPD_mobile-H6/H6-black/
+Hubs: ['BS3', 'BS4', 'BS5', 'BS2']
+Traceback (most recent call last):
+  File "2_env_occ_pred.py", line 135, in <module>
+    data_path = os.path.join(path, H, hub, 'processed_env', f'{H_num}_{hub}_full_cleaned.csv')
+NameError: name 'hub' is not defined
+(base) Maggies-MBP:Inference-Environmental maggie$ python3 2_env_occ_pred.py -path /Users/maggie/Desktop/HPD_mobile_data/HPD-env/HPD_mobile-H6/H6-black/
+Hubs: ['BS3', 'BS4', 'BS5', 'BS2']
+Traceback (most recent call last):
+  File "2_env_occ_pred.py", line 136, in <module>
+    data_path = os.path.join(path, H, hub, 'processed_env', f'{H_num}_{hub}_full_cleaned.csv')
+  File "/Users/maggie/anaconda3/lib/python3.7/posixpath.py", line 94, in join
+    genericpath._check_arg_types('join', a, *p)
+  File "/Users/maggie/anaconda3/lib/python3.7/genericpath.py", line 149, in _check_arg_types
+    (funcname, s.__class__.__name__)) from None
+TypeError: join() argument must be str or bytes, not 'list'
+(base) Maggies-MBP:Inference-Environmental maggie$ python3 2_env_occ_pred.py -path /Users/maggie/Desktop/HPD_mobile_data/HPD-env/HPD_mobile-H6/H6-black/
+Traceback (most recent call last):
+  File "2_env_occ_pred.py", line 128, in <module>
+    H = Home_system.split('-')
+NameError: name 'Home_system' is not defined
+(base) Maggies-MBP:Inference-Environmental maggie$ python3 2_env_occ_pred.py -path /Users/maggie/Desktop/HPD_mobile_data/HPD-env/HPD_mobile-H6/H6-black/
+Hubs: ['BS3', 'BS4', 'BS5', 'BS2']
+model_path: /Users/maggie/Documents/Github/HPD-Inference_and_Processing/Inference-env/env-Models/H6-black/BS3/env_model/BS3/*
+Traceback (most recent call last):
+  File "2_env_occ_pred.py", line 142, in <module>
+    model_path = natsorted(glob(model_path))[-1] # pick the last / mode complex model (p.s. natsorted is necessary, sorted doesn't sort the paths corectly)
+IndexError: list index out of range
+(base) Maggies-MBP:Inference-Environmental maggie$ python3 2_env_occ_pred.py -path /Users/maggie/Desktop/HPD_mobile_data/HPD-env/HPD_mobile-H6/H6-black/
+Hubs: ['BS3', 'BS4', 'BS5', 'BS2']
+Traceback (most recent call last):
+  File "2_env_occ_pred.py", line 139, in <module>
+    model_path = mylistdir(os.path.join(model_location, home_system, hub, 'env_model', hub), bit='.json')
+  File "2_env_occ_pred.py", line 65, in mylistdir
+    filelist = os.listdir(directory)
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/maggie/Documents/Github/HPD-Inference_and_Processing/Inference-env/env-Models/H6-black/BS3/env_model/BS3'
+(base) Maggies-MBP:Inference-Environmental maggie$ python3 2_env_occ_pred.py -path /Users/maggie/Desktop/HPD_mobile_data/HPD-env/HPD_mobile-H6/H6-black/
+Hubs: ['BS3', 'BS4', 'BS5', 'BS2']
+Traceback (most recent call last):
+  File "2_env_occ_pred.py", line 139, in <module>
+    model_path = mylistdir(os.path.join(model_location, home_system, hub, 'env_model'), bit='.json')
+  File "2_env_occ_pred.py", line 65, in mylistdir
+    filelist = os.listdir(directory)
+FileNotFoundError: [Errno 2] No such file or directory: '/Users/maggie/Documents/Github/HPD-Inference_and_Processing/Inference-env/env-Models/H6-black/BS3/env_model'
+(base) Maggies-MBP:Inference-Environmental maggie$ python3 2_env_occ_pred.py -path /Users/maggie/Desktop/HPD_mobile_data/HPD-env/HPD_mobile-H6/H6-black/
+Hubs: ['BS3', 'BS4', 'BS5', 'BS2']
+model_path: ['rh_percent_s18_d18_t1_model.json', 'rh_percent_s18_d12_t1_model.json', 'light_lux_s12_d6_t1_model.json', 'light_lux_s12_d18_t1_model.json', 'temp_c_s19_d12_t1_model.json', 'temp_c_s19_d18_t1_model.json', 'rh_percent_s18_d6_t1_model.json', 'temp_c_s19_d6_t1_model.json', 'light_lux_s12_d12_t1_model.json']
+Traceback (most recent call last):
+  File "2_env_occ_pred.py", line 142, in <module>
+    model_path = natsorted(glob(model_path))[-1] # pick the last / mode complex model (p.s. natsorted is necessary, sorted doesn't sort the paths corectly)
+  File "/Users/maggie/anaconda3/lib/python3.7/glob.py", line 20, in glob
+    return list(iglob(pathname, recursive=recursive))
+  File "/Users/maggie/anaconda3/lib/python3.7/glob.py", line 40, in _iglob
+    dirname, basename = os.path.split(pathname)
+  File "/Users/maggie/anaconda3/lib/python3.7/posixpath.py", line 107, in split
+    p = os.fspath(p)
+TypeError: expected str, bytes or os.PathLike object, not list
+(base) Maggies-MBP:Inference-Environmental maggie$ python3 2_env_occ_pred.py -path /Users/maggie/Desktop/HPD_mobile_data/HPD-env/HPD_mobile-H6/H6-black/
+Hubs: ['BS3', 'BS4', 'BS5', 'BS2']
+model_path: /Users/maggie/Documents/Github/HPD-Inference_and_Processing/Inference-Environmental/env-Models/H6-black/BS3/env_model
+model_path: /Users/maggie/Documents/Github/HPD-Inference_and_Processing/Inference-Environmental/env-Models/H6-black/BS3/env_model
+model_path: /Users/maggie/Documents/Github/HPD-Inference_and_Processing/Inference-Environmental/env-Models/H6-black/BS4/env_model
+model_path: /Users/maggie/Documents/Github/HPD-Inference_and_Processing/Inference-Environmental/env-Models/H6-black/BS4/env_model
+model_path: /Users/maggie/Documents/Github/HPD-Inference_and_Processing/Inference-Environmental/env-Models/H6-black/BS5/env_model
+model_path: /Users/maggie/Documents/Github/HPD-Inference_and_Processing/Inference-Environmental/env-Models/H6-black/BS5/env_model
+model_path: /Users/maggie/Documents/Github/HPD-Inference_and_Processing/Inference-Environmental/env-Models/H6-black/BS2/env_model
+model_path: /Users/maggie/Documents/Github/HPD-Inference_and_Processing/Inference-Environmental/env-Models/H6-black/BS2/env_model
+(base) Maggies-MBP:Inference-Environmental maggie$ python3 2_env_occ_pred.py -path /Users/maggie/Desktop/HPD_mobile_data/HPD-env/HPD_mobile-H6/H6-black/
+Hubs: ['BS3', 'BS4', 'BS5', 'BS2']
+model_path: ['rh_percent_s18_d18_t1_model.json', 'rh_percent_s18_d12_t1_model.json', 'light_lux_s12_d6_t1_model.json', 'light_lux_s12_d18_t1_model.json', 'temp_c_s19_d12_t1_model.json', 'temp_c_s19_d18_t1_model.json', 'rh_percent_s18_d6_t1_model.json', 'temp_c_s19_d6_t1_model.json', 'light_lux_s12_d12_t1_model.json']
+model_path: temp_c_s19_d18_t1_model.json
+model_path: ['rh_percent_s18_d18_t1_model.json', 'rh_percent_s18_d12_t1_model.json', 'light_lux_s12_d6_t1_model.json', 'light_lux_s12_d18_t1_model.json', 'temp_c_s19_d12_t1_model.json', 'temp_c_s19_d18_t1_model.json', 'rh_percent_s18_d6_t1_model.json', 'temp_c_s19_d6_t1_model.json', 'light_lux_s12_d12_t1_model.json']
+model_path: temp_c_s19_d18_t1_model.json
+model_path: ['rh_percent_s18_d18_t1_model.json', 'rh_percent_s18_d12_t1_model.json', 'light_lux_s12_d6_t1_model.json', 'light_lux_s12_d18_t1_model.json', 'temp_c_s19_d12_t1_model.json', 'temp_c_s19_d18_t1_model.json', 'rh_percent_s18_d6_t1_model.json', 'temp_c_s19_d6_t1_model.json', 'light_lux_s12_d12_t1_model.json']
+model_path: temp_c_s19_d18_t1_model.json
+model_path: ['rh_percent_s18_d18_t1_model.json', 'rh_percent_s18_d12_t1_model.json', 'light_lux_s11_d12_t1_model.json', 'light_lux_s11_d6_t1_model.json', 'temp_c_s19_d12_t1_model.json', 'temp_c_s19_d18_t1_model.json', 'rh_percent_s18_d6_t1_model.json', 'temp_c_s19_d6_t1_model.json', 'light_lux_s11_d18_t1_model.json']
+model_path: temp_c_s19_d18_t1_model.json
+(base) Maggies-MBP:Inference-Environmental maggie$ git status
+On branch Maggie-Edits
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   2_env_occ_pred.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Maggies-MBP:Inference-Environmental maggie$ git add .
+(base) Maggies-MBP:Inference-Environmental maggie$ git status
+On branch Maggie-Edits
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   2_env_occ_pred.py
+
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash 
+Saved working directory and index state WIP on Maggie-Edits: 763fda3 gitignore
+(base) Maggies-MBP:Inference-Environmental maggie$ git branch
+* Maggie-Edits
+  master
+(base) Maggies-MBP:Inference-Environmental maggie$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+(base) Maggies-MBP:Inference-Environmental maggie$ ls
+2_env_occ_pred.py	__pycache__		env-Models		utility_func.py
+(base) Maggies-MBP:Inference-Environmental maggie$ python3 2_env_occ_pred.py -path /Users/maggie/Desktop/HPD_mobile_data/HPD-env/HPD_mobile-H6/ -H 6 -sta_col B -sta_num 3 
+model_path: /Users/maggie/Documents/Github/HPD-Inference_and_Processing/Inference-env/env-Models/H6-black/BS3/env_model/temp_c*
+Traceback (most recent call last):
+  File "2_env_occ_pred.py", line 138, in <module>
+    model_path = natsorted(glob(model_path))[-1] # pick the last / mode complex model
+IndexError: list index out of range
+(base) Maggies-MBP:Inference-Environmental maggie$ python3 2_env_occ_pred.py -path /Users/maggie/Desktop/HPD_mobile_data/HPD-env/HPD_mobile-H6/ -H 6 -sta_col B -sta_num 3 
+  File "2_env_occ_pred.py", line 135
+    model_path = os.path.join(model_location,f"H{H_num}-{sta_col}",f"{station_color}S{station_num}","env_model",f"{sensor}_"*)
+                                                                                                                             ^
+SyntaxError: invalid syntax
+(base) Maggies-MBP:Inference-Environmental maggie$ python3 2_env_occ_pred.py -path /Users/maggie/Desktop/HPD_mobile_data/HPD-env/HPD_mobile-H6/ -H 6 -sta_col B -sta_num 3 
+model_path: /Users/maggie/Documents/Github/HPD-Inference_and_Processing/Inference-env/env-Models/H6-black/BS3/env_model/temp_c_*
+Traceback (most recent call last):
+  File "2_env_occ_pred.py", line 138, in <module>
+    model_path = natsorted(glob(model_path))[-1] # pick the last / mode complex model
+IndexError: list index out of range
+(base) Maggies-MBP:Inference-Environmental maggie$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   2_env_occ_pred.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash
+Saved working directory and index state WIP on master: ff5ffb7 add .gitattributes
+(base) Maggies-MBP:Inference-Environmental maggie$ git checkout Maggie_edits
+error: pathspec 'Maggie_edits' did not match any file(s) known to git.
+(base) Maggies-MBP:Inference-Environmental maggie$ git branch
+  Maggie-Edits
+* master
+(base) Maggies-MBP:Inference-Environmental maggie$ git checkout Maggie-Edits
+Switched to branch 'Maggie-Edits'
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash list
+stash@{0}: WIP on master: ff5ffb7 add .gitattributes
+stash@{1}: WIP on Maggie-Edits: 763fda3 gitignore
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash apply
+On branch Maggie-Edits
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   2_env_occ_pred.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Maggies-MBP:Inference-Environmental maggie$ git status
+On branch Maggie-Edits
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   2_env_occ_pred.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash apply --index
+error: Your local changes to the following files would be overwritten by merge:
+	2_env_occ_pred.py
+Please commit your changes or stash them before you merge.
+Aborting
+Index was not unstashed.
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash -m "second stash"
+usage: git stash list [<options>]
+   or: git stash show [<stash>]
+   or: git stash drop [-q|--quiet] [<stash>]
+   or: git stash ( pop | apply ) [--index] [-q|--quiet] [<stash>]
+   or: git stash branch <branchname> [<stash>]
+   or: git stash save [--patch] [-k|--[no-]keep-index] [-q|--quiet]
+		      [-u|--include-untracked] [-a|--all] [<message>]
+   or: git stash [push [--patch] [-k|--[no-]keep-index] [-q|--quiet]
+		       [-u|--include-untracked] [-a|--all] [-m <message>]
+		       [-- <pathspec>...]]
+   or: git stash clear
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash 
+Saved working directory and index state WIP on Maggie-Edits: 763fda3 gitignore
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash apply --index
+On branch Maggie-Edits
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   2_env_occ_pred.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Maggies-MBP:Inference-Environmental maggie$ git status
+On branch Maggie-Edits
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   2_env_occ_pred.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash list
+stash@{0}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{1}: WIP on master: ff5ffb7 add .gitattributes
+stash@{2}: WIP on Maggie-Edits: 763fda3 gitignore
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash apply {1}
+{1} is not a valid reference
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash apply stash@{1}
+error: Your local changes to the following files would be overwritten by merge:
+	2_env_occ_pred.py
+Please commit your changes or stash them before you merge.
+Aborting
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash
+Saved working directory and index state WIP on Maggie-Edits: 763fda3 gitignore
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash list
+stash@{0}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{1}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{2}: WIP on master: ff5ffb7 add .gitattributes
+stash@{3}: WIP on Maggie-Edits: 763fda3 gitignore
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash apply stash@{1}
+On branch Maggie-Edits
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   2_env_occ_pred.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash apply stash@{0}
+error: Your local changes to the following files would be overwritten by merge:
+	2_env_occ_pred.py
+Please commit your changes or stash them before you merge.
+Aborting
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash
+Saved working directory and index state WIP on Maggie-Edits: 763fda3 gitignore
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash apply stash@{0}
+On branch Maggie-Edits
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   2_env_occ_pred.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Maggies-MBP:Inference-Environmental maggie$ git add
+Nothing specified, nothing added.
+Maybe you wanted to say 'git add .'?
+(base) Maggies-MBP:Inference-Environmental maggie$ git add .
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash apply stash@{3}
+On branch Maggie-Edits
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   2_env_occ_pred.py
+
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash apply stash@{2}
+On branch Maggie-Edits
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   2_env_occ_pred.py
+
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash list
+stash@{0}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{1}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{2}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{3}: WIP on master: ff5ffb7 add .gitattributes
+stash@{4}: WIP on Maggie-Edits: 763fda3 gitignore
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash pop
+On branch Maggie-Edits
+Changes to be committed:
+  (use "git reset HEAD <file>..." to unstage)
+
+	modified:   2_env_occ_pred.py
+
+Dropped refs/stash@{0} (e2cb345d9e1f928647e57b48a9e9b19347bb8e76)
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash
+Saved working directory and index state WIP on Maggie-Edits: 763fda3 gitignore
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash pop
+On branch Maggie-Edits
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   2_env_occ_pred.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+Dropped refs/stash@{0} (ef957263d074da693a1b91f6d3e12da9e1afeb9c)
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash pop
+error: Your local changes to the following files would be overwritten by merge:
+	2_env_occ_pred.py
+Please commit your changes or stash them before you merge.
+Aborting
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash list
+stash@{0}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{1}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{2}: WIP on master: ff5ffb7 add .gitattributes
+stash@{3}: WIP on Maggie-Edits: 763fda3 gitignore
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash list
+stash@{0}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{1}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{2}: WIP on master: ff5ffb7 add .gitattributes
+stash@{3}: WIP on Maggie-Edits: 763fda3 gitignore
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash apply stash@{0}
+error: Your local changes to the following files would be overwritten by merge:
+	2_env_occ_pred.py
+Please commit your changes or stash them before you merge.
+Aborting
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash
+Saved working directory and index state WIP on Maggie-Edits: 763fda3 gitignore
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash list
+stash@{0}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{1}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{2}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{3}: WIP on master: ff5ffb7 add .gitattributes
+stash@{4}: WIP on Maggie-Edits: 763fda3 gitignore
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash apply stash@{0}
+On branch Maggie-Edits
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	modified:   2_env_occ_pred.py
+
+no changes added to commit (use "git add" and/or "git commit -a")
+(base) Maggies-MBP:Inference-Environmental maggie$ open 2_env_occ_pred.py 
+(base) Maggies-MBP:Inference-Environmental maggie$ open 2_env_occ_pred.py 
+(base) Maggies-MBP:Inference-Environmental maggie$ git log
+commit 763fda35dcab846a87cfad32f6fdc6e5d9b9f044 (HEAD -> Maggie-Edits, origin/Maggie-Edits)
+Author: mhsjacoby <margarite.jacoby@colorado.edu>
+Date:   Tue Aug 18 17:16:20 2020 -0700
+
+    gitignore
+
+commit 3354912491ac837c0da11e312534f0c47a276697
+Author: mhsjacoby <margarite.jacoby@colorado.edu>
+Date:   Tue Aug 18 17:13:17 2020 -0700
+
+    add argparser syntax and update storage locations
+
+commit 16e42f21e04df38e69495d4be58235f018b725aa
+Author: mhsjacoby <margarite.jacoby@colorado.edu>
+Date:   Fri Aug 14 13:01:29 2020 -0700
+
+    new env inferencing repo
+(base) Maggies-MBP:Inference-Environmental maggie$ git log
+commit 763fda35dcab846a87cfad32f6fdc6e5d9b9f044 (HEAD -> Maggie-Edits, origin/Maggie-Edits)
+Author: mhsjacoby <margarite.jacoby@colorado.edu>
+Date:   Tue Aug 18 17:16:20 2020 -0700
+
+    gitignore
+
+commit 3354912491ac837c0da11e312534f0c47a276697
+Author: mhsjacoby <margarite.jacoby@colorado.edu>
+Date:   Tue Aug 18 17:13:17 2020 -0700
+
+    add argparser syntax and update storage locations
+
+commit 16e42f21e04df38e69495d4be58235f018b725aa
+Author: mhsjacoby <margarite.jacoby@colorado.edu>
+Date:   Fri Aug 14 13:01:29 2020 -0700
+
+    new env inferencing repo
+(base) Maggies-MBP:Inference-Environmental maggie$ git stash list
+stash@{0}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{1}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{2}: WIP on Maggie-Edits: 763fda3 gitignore
+stash@{3}: WIP on master: ff5ffb7 add .gitattributes
+stash@{4}: WIP on Maggie-Edits: 763fda3 gitignore
+(base) Maggies-MBP:Inference-Environmental maggie$ git log
+
