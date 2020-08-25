@@ -101,23 +101,20 @@ def main(data_path, model_path):
 	timestamped_pred = timestamp.join(prediction)
 
 	# Save path
-	fname = os.path.basename(data_path) # output csv is named the same as the input csv, but saved to Inference_DB
-# 	fname = f"H{H_num}_{station_color}S{station_num}_pred.csv"
-# 	print(f"fname: {fname}")
-	# save_folder = os.path.join(path,"Inference_DB",f"H{H_num}-{sta_col}",f"{station_color}S{station_num}","env")
-	save_folder = os.path.join('/Users/maggie/Desktop/inferece_test', path,  'Inference_DB', hub)
-	# save_folder = os.path.join(path, 'Inference_DB', hub)
+	fname = os.path.basename(f'{H_num}_{hub}_{sensor}_inference.csv') # output csv is named the same as the input csv, but saved to Inference_DB
 
-	# if not os.path.exists(save_folder):
-	# 	os.makedirs(save_folder)
-	save_folder = make_storage_directory(save_folder)
-	save_path = os.path.join(save_folder, fname)	
+	save_folder = make_storage_directory(os.path.join(path, 'Inference_DB', hub, 'env'))
+	save_path = os.path.join(save_folder, fname)
+		
 	timestamped_pred.to_csv(save_path,index=False)
+	print(f'writing CSV to {save_path} of length {len(timestamped_pred)}')
 
 
 
 
 if __name__ == '__main__':  
+	sensors = ['temp_c', 'rh_percent', 'light_lux']
+
 	model_location = "/Users/maggie/Documents/Github/HPD-Inference_and_Processing/Inference-Environmental/env-Models"
 	# Loading arg
 	parser = argparse.ArgumentParser()
@@ -133,15 +130,16 @@ if __name__ == '__main__':
 	H = home_system.split('-')
 	H_num, color = H[0], H[1][0].upper()
 	hubs = [args.hub] if len(args.hub) > 0 else sorted(mylistdir(path, bit=f'{color}S', end=False))
-	print(f'Hubs: {hubs}')
+	print(f'List of Hubs: {hubs}')
 	for hub in hubs:
+		print(f'hub: {hub}')
 
-		sensor = 'temp_c'
-		# @Maggie put loop in here to go through the modalities
+		for sensor in sensors:
+			print(f'sensor: {sensor}')
 
-		data_path = os.path.join(path, hub, 'processed_env', f'{H_num}_{hub}_full_cleaned.csv')
+			data_path = os.path.join(path, hub, 'processed_env', f'{H_num}_{hub}_full_cleaned.csv')
 
-		model_path = glob(os.path.join(model_location, home_system, hub, 'env_model',f'{sensor}_*.json'))
-		model_path = natsorted(model_path)[-1] # pick the last / mode complex model (p.s. natsorted is necessary, sorted doesn't sort the paths corectly)
-		print(f'hub: {hub}, model_path: {os.path.basename(model_path)}')
-		main(data_path=data_path, model_path=model_path)
+			model_path = glob(os.path.join(model_location, home_system, hub, 'env_model',f'{sensor}_*.json'))
+			model_path = natsorted(model_path)[-1] # pick the last / mode complex model (p.s. natsorted is necessary, sorted doesn't sort the paths corectly)
+			print(f'hub: {hub}, model used: {os.path.basename(model_path)}')
+			main(data_path=data_path, model_path=model_path)

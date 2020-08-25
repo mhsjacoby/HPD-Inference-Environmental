@@ -131,7 +131,6 @@ def inference(states, TM):
 	for index,state in enumerate(states):
 		try:
 			pred.append(TM[state])
-			# print(f"State {state} Exist")
 		except:
 			missing +=1
 			# print(f"State {state} DNE, forwarding previous prediction")]
