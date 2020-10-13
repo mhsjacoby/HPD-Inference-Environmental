@@ -15,14 +15,15 @@ from datetime import datetime, timedelta
 import numpy as np
 import pandas as pd
 
-from myFunctions import *
+from my_functions import *
 from cleanData import *
 
 class ReadEnv():
     
     def __init__(self, house_entry, sensor_hubs = [], pi=True, root_dir='/Users/maggie/Desktop/HPD_mobile_data/HPD-env', write=True):
         self.home, self.system = house_entry.split('-')
-        self.path = f'{root_dir}/{house_entry}' if root_dir.strip('/').split('/')[0] == 'Volumes' else f'{root_dir}/HPD_mobile-{self.home}/{house_entry}'
+        # self.path = f'{root_dir}/{house_entry}' if root_dir.strip('/').split('/')[0] == 'Volumes' else f'{root_dir}/HPD_mobile-{self.home}/{house_entry}'
+        self.path = root_dir
         self.summary_dir = make_storage_directory(os.path.join(self.path, 'Summaries', 'EnvSummaries'))
         self.hubs = sorted(sensor_hubs if len(sensor_hubs) > 0 else mylistdir(self.path, bit=f'{self.system[0].upper()}S', end=False))
         self.pi = pi
@@ -63,7 +64,7 @@ class ReadEnv():
         df = self.clean_dates(df)
         if self.pi:
             print(f'> gathering data from pi...')
-            from_pi = os.path.join(self.path, hub, 'env_params_from_pi') 
+            from_pi = os.path.join(self.path, hub, 'env_from_pi') 
             pi_days = sorted(mylistdir(from_pi))
             pi_df = self.read_all(from_pi, pi_days)
             pi_df = self.clean_dates(pi_df)

@@ -2,13 +2,13 @@
 cleanData.py
 Author: Maggie Jacoby, August 2020
 
-This is the data cleaning function that is called when processing the env reading
+This is the data cleaning function that is called when processing the env readings
 Use in combination with HomeDataClasses.py and explore_env.ipynb
 """
 
 import numpy as np
 import pandas as pd
-from myFunctions import *
+from my_functions import *
 
 
 ### Hard coded fill limits and threshold values
