@@ -19,19 +19,17 @@ from datetime import datetime, timedelta
 import numpy as np
 import pandas as pd
 
-import HomeDataClasses as HD
-from cleanData import *
-
 from my_functions import *
 from gen_argparse import *
 
-
+from cleanData import *
+import HomeDataClasses as HD
 
 
 if __name__ == '__main__':
 
     # root_path = path.strip('/').split('/')[:-1]
 
-    data = HD.ReadEnv(house_entry=home_system, pi=True, root_dir=path)
+    data = HD.ReadEnv(house_entry=home_system, pi=pi_env, root_dir=path)
     data.main()
     data.clean_data()

@@ -16,6 +16,7 @@ import numpy as np
 import pandas as pd
 
 from my_functions import *
+
 from cleanData import *
 
 class ReadEnv():
@@ -142,8 +143,10 @@ class ReadEnv():
 
     def main(self):
         self.all_dfs = {}
+        print('hubs: ', self.hubs)
         for hub in self.hubs:
             print(f'\n> working on: {self.home}-{self.system}, hub: {hub}')
+            # sys.exit()
             hub_df = self.get_all_data(hub)
             self.write_data(hub_df, hub, name=f'{self.home}_{hub}_all_raw') if self.write else print('not writing raw data.')
             self.make_day_dfs(hub_df, hub, write_day=True)    # doesn't return anything, just write the (CSVs and) summaries by day (write=True to write CSVs)
