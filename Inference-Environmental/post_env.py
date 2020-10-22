@@ -1,7 +1,7 @@
 """
 post_env.py
 Authors: Sin Yong Tan and Maggie Jacoby
-Edited: 2020-09-14 - look at files with probabilities (not just binary predictions)
+Edited: 2020-10-22 - convert occupied columns to numeric before taking max
 
 Input: Folder with env inferences modality wise (10 seconds, all days)
 Output: Day-wise CSVs with inferences on the 10 seconds for all modalitoes and combined
@@ -22,27 +22,12 @@ import time
 from datetime import datetime
 
 from my_functions import *
+from gen_argparse import *
 
 
 
 if __name__ == '__main__':
-	# sensors = ['temp_c', 'rh_percent', 'light_lux']
 
-	parser = argparse.ArgumentParser()
-	parser.add_argument('-path','--path', default='AA', type=str, help='path of stored data')
-	parser.add_argument('-hub', '--hub', default='', type=str, help='if only one hub... ')
-	parser.add_argument('-save_location', '--save', default='', type=str, help='location to store files (if different from path')
-	parser.add_argument('-start_date', '--start', default='', type=str, help='type day to start')
-
-	args = parser.parse_args()
-
-	path = args.path
-	save_path = args.save if len(args.save) > 0 else path
-	start_date = args.start
-	home_system = os.path.basename(path.strip('/'))
-	H = home_system.split('-')
-	H_num, color = H[0], H[1][0].upper()
-	hubs = [args.hub] if len(args.hub) > 0 else sorted(mylistdir(path, bit=f'{color}S', end=False))
 	print(f'List of Hubs: {hubs}')
 
 	for hub in hubs:
@@ -70,10 +55,11 @@ if __name__ == '__main__':
 		all_data = all_data.reindex(timeframe, fill_value=np.nan)
 		
 		cols = [col for col in all_data.columns if 'occupied' in col]
+		for col in cols:
+			all_data[col] = pd.to_numeric(all_data[col])
 		all_data['occupied'] = all_data[cols].max(axis=1)
 		all_data["day"] = all_data.index.date
 		unique_days = pd.unique(all_data["day"])
-
 
 		for day in unique_days:
 			data = all_data.loc[all_data['day'] == day]

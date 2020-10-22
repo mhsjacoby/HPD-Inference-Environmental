@@ -1,10 +1,11 @@
 """
-2_env_occ_pred.py
+env_confidence.py
 Author: Sin Yong Tan 2020-08-13
 Updates by Maggie Jacoby
 	2020-09-11: return probability prediction, as well as occupied/unoccupied
 
 This code takes in processed env csvs (full - all days) and outputs binary occupancy inferences
+previously called '2_env_occ_pred.py'
 
 ==== SY Notes ====
 Input is expected to be cleaned / pre-processed beforehand
@@ -16,8 +17,9 @@ ie, no gaps/no missing data
 # import numpy as np
 import time
 import json
+import sys
 
-import argparse
+# import argparse
 
 from utility_func import symbolize, state_gen, prob_thresh, inference
 
@@ -29,6 +31,7 @@ from glob import glob
 from natsort import natsorted
 
 from my_functions import *
+from gen_argparse import *
 
 
 
@@ -91,19 +94,19 @@ if __name__ == '__main__':
 	# sensors = ['temp_c', 'rh_percent', 'light_lux', 'co2eq_ppm']
 	model_location = os.path.abspath(os.getcwd())
 	# Loading arg
-	parser = argparse.ArgumentParser()
-	parser.add_argument('-path','--path', default="AA", type=str, help='path of stored data')
-	parser.add_argument('-hub', '--hub', default='', type=str, help='if only one hub... ')
-	parser.add_argument('-save_location', '--save', default='', type=str, help='location to store files (if different from path')
+	# parser = argparse.ArgumentParser()
+	# parser.add_argument('-path','--path', default="AA", type=str, help='path of stored data')
+	# parser.add_argument('-hub', '--hub', default='', type=str, help='if only one hub... ')
+	# parser.add_argument('-save_location', '--save', default='', type=str, help='location to store files (if different from path')
 
-	args = parser.parse_args()
+	# args = parser.parse_args()
 
-	path = args.path
-	save_path = args.save if len(args.save) > 0 else path
-	home_system = path.strip('/').split('/')[-1]
-	H = home_system.split('-')
-	H_num, color = H[0], H[1][0].upper()
-	hubs = [args.hub] if len(args.hub) > 0 else sorted(mylistdir(path, bit=f'{color}S', end=False))
+	# path = args.path
+	# save_path = args.save if len(args.save) > 0 else path
+	# home_system = path.strip('/').split('/')[-1]
+	# H = home_system.split('-')
+	# H_num, color = H[0], H[1][0].upper()
+	# hubs = [args.hub] if len(args.hub) > 0 else sorted(mylistdir(path, bit=f'{color}S', end=False))
 	print(f'List of Hubs: {hubs}')
 
 	for hub in hubs:
@@ -111,8 +114,9 @@ if __name__ == '__main__':
 
 		model_paths = glob(os.path.join(model_location, 'env-Models', home_system, hub, 'env_model', '*.json'))
 		models = [os.path.basename(path_name) for path_name in model_paths]
+
 		sensors = set([x.split('_')[0] + "_" + x.split('_')[1] for x in models])
-		print(sensors)
+		print(sensors) if len(sensors) > 0 else print(f'No models for hub {hub} in home {home_system}.')
 
 		for sensor in sensors:
 			print(f'sensor: {sensor}')
