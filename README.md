@@ -14,7 +14,7 @@ Author: Maggie Jacoby
 - Move helper functions to subfolder
 - add `post_env.py` call to `env_confidence.py`
 - Modify inferencing code to use Sin Yong's STPN python package! 
-- Write up steps for performing inferencing. 
+~~- Write up steps for performing inferencing. ~~
 
 ## Processing-Environmental
 - ProcessEnvData.py
@@ -26,15 +26,11 @@ Author: Maggie Jacoby
         - Aggregated raw CSVs by hub
     Cleaned CSVs contain infomration (binary) on which time points/modalities were cleaned
 
-
 - HomeDataClasses.py
     Contains a class that which takes care of the reading and processing of the env files.
 
 - cleanData.py
-    Contains a function that is called in the HomeData class and actually performs the data cleaning. <<Write more about this>>
-
-    ### ARCHIVE
-    Contains a few Jupyter notebooks where the above scripts were originally written.  
+    Contains a function that is called in the HomeData class and actually performs the data cleaning. **Write more about this**
 
 
 ## Inferencing-Environmental
@@ -51,5 +47,12 @@ Author: Maggie Jacoby
     Contains helper functions for inferencing. 
 
 
+### ARCHIVE
+    Contains a few Jupyter notebooks where the above scripts were originally written. 
 
 ## Steps for processing and generating inferences on environmental modalities 
+1. Run `Process-Environmental/ProcessEnvData.py` to get CSVs.
+
+2. Run `Inference-Environmental/env_confidence.py` to get modality wise CSVs.
+
+3. Run `Inference-Environmental/post_env.py` to combine modalities into one CSV per hub.

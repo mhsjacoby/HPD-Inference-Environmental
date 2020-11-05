@@ -93,26 +93,12 @@ def main(data_path, model_path):
 if __name__ == '__main__':  
 	# sensors = ['temp_c', 'rh_percent', 'light_lux', 'co2eq_ppm']
 	model_location = os.path.abspath(os.getcwd())
-	# Loading arg
-	# parser = argparse.ArgumentParser()
-	# parser.add_argument('-path','--path', default="AA", type=str, help='path of stored data')
-	# parser.add_argument('-hub', '--hub', default='', type=str, help='if only one hub... ')
-	# parser.add_argument('-save_location', '--save', default='', type=str, help='location to store files (if different from path')
-
-	# args = parser.parse_args()
-
-	# path = args.path
-	# save_path = args.save if len(args.save) > 0 else path
-	# home_system = path.strip('/').split('/')[-1]
-	# H = home_system.split('-')
-	# H_num, color = H[0], H[1][0].upper()
-	# hubs = [args.hub] if len(args.hub) > 0 else sorted(mylistdir(path, bit=f'{color}S', end=False))
 	print(f'List of Hubs: {hubs}')
 
 	for hub in hubs:
 		print(f'hub: {hub}')
 
-		model_paths = glob(os.path.join(model_location, 'env-Models', home_system, hub, 'env_model', '*.json'))
+		model_paths = glob(os.path.join(model_location, 'Models-env', home_system, hub, 'env_model', '*.json'))
 		models = [os.path.basename(path_name) for path_name in model_paths]
 
 		sensors = set([x.split('_')[0] + "_" + x.split('_')[1] for x in models])
@@ -122,7 +108,7 @@ if __name__ == '__main__':
 			print(f'sensor: {sensor}')
 			data_path = os.path.join(path, hub, 'processed_env', f'{H_num}_{hub}_full_cleaned.csv')
 
-			model_path = glob(os.path.join(model_location, 'env-Models', home_system, hub, 'env_model', f'{sensor}_*.json'))
+			model_path = glob(os.path.join(model_location, 'Models-env', home_system, hub, 'env_model', f'{sensor}_*.json'))
 			model_path = natsorted(model_path)[-1] # pick the last / mode complex model (p.s. natsorted is necessary, sorted doesn't sort the paths corectly)
 			print(f'hub: {hub}, modaltiy: {sensor}, model used: {os.path.basename(model_path)}')
 			main(data_path=data_path, model_path=model_path)
