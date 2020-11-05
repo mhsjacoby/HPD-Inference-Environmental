@@ -32,6 +32,8 @@ Author: Maggie Jacoby
 - cleanData.py
     Contains a function that is called in the HomeData class and actually performs the data cleaning. **Write more about this**
 
+- Full_env_processing.ipynb
+    code that was originally used for reading and combining the json files. Still used to generate CSVs for training. Does Minimal processing, but creates full CSVs, joins all days, and finds "complete" splits. 
 
 ## Inferencing-Environmental
 - env_confidence.py
@@ -47,7 +49,7 @@ Author: Maggie Jacoby
     Contains helper functions for inferencing. 
 
 
-### ARCHIVE
+## ARCHIVE
     Contains a few Jupyter notebooks where the above scripts were originally written. 
 
 ## Steps for processing and generating inferences on environmental modalities 
