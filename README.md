@@ -14,7 +14,7 @@ Author: Maggie Jacoby
 - Move helper functions to subfolder
 - add `post_env.py` call to `env_confidence.py`
 - Modify inferencing code to use Sin Yong's STPN python package! 
-~~- Write up steps for performing inferencing. ~~
+- ~~Write up steps for performing inferencing. ~~
 
 ## Processing-Environmental
 - ProcessEnvData.py
